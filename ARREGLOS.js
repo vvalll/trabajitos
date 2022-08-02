@@ -157,3 +157,20 @@ suma1=0
     }
 }
 console.log(vector,suma,suma1)
+
+
+//-- 
+
+var vector=[];
+for (let i = 0; i < 20 ; i++) {
+    vector[i]=Math.round((Math.random())*100);
+    for (let i = 0; i < vector.length; i++) {
+        if (vector%2==0) {
+            console.log("pares:",vector[i])
+        } else if (vector!=0) {
+            console.log("impares:",vector[i])
+        } {
+        }
+    }
+}
+console.log(vector)
