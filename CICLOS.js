@@ -12,3 +12,19 @@ while (count < 6) {
         console.log(`${count} no es divisor de ${num}`)
 } 
 }
+
+
+
+pri = 1
+num = 4
+for (let i = 2; i < num; i++) {
+    if (num % i == 0) {
+        pri = 2
+    }
+}
+if (pri == 1) {
+    console.log(`${num} es primo`)
+} else if (pri == 2) {
+
+    console.log(`${num} no es primo`)
+}
