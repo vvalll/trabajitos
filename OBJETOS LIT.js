@@ -70,7 +70,7 @@ var fracciones={
 
 //MULTIPLICACION: 
 
-nume1 = fracciones.numerador1*fracciones.denominador2
+nume1 = fracciones.numerador1*fracciones.numerador2
 deno1 = fracciones.denominador1*fracciones.denominador2
 console.log(`La multiplicacion es: ${nume1}/${deno1}`)
 
@@ -79,3 +79,4 @@ console.log(`La multiplicacion es: ${nume1}/${deno1}`)
 nume2 = fracciones.numerador1*fracciones.denominador2
 deno2 = fracciones.denominador1*fracciones.numerador2
 console.log(`La division es: ${nume2}/${deno2}`)
+
