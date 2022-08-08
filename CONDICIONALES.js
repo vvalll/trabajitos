@@ -162,8 +162,8 @@ if (day >= 1 && day <= 31) {
 //11:59:59, el programa responde 12:00:00. 
 
 var hr= 14
-var mn= 21
-var sg= 59
+var mn= 59
+var sg= 58
 
 var sumasg = sg + 1
 var sumamn = mn + 1
@@ -173,6 +173,8 @@ if (sumasg == 60 && sumamn == 60) {
     console.log(`${sumahr}:00:00`)
 } else if (sumasg == 60) {
     console.log(`${hr}:${sumamn}:00`)
+} else if (sumamn == 60) {
+    console.log(`${hr}:${sumamn}:${sumasg}`)
 } else {
     console.log(`${hr}:${mn}:${sumasg}`) 
 }

@@ -75,13 +75,12 @@ for (let i = 1; i <= multip; i++) {
 //9. Calcular la operación x n sin utilizar la función pow 
 
 var x = 5;
-var y = 4; 
+var y = 3; 
 var mult = 1;
 
-for (let i = 1; i <= y; i++) {
-    for (let i = 1; i <= y; i++) {
-        i =+ x    
+for (let i = 1; i <= y; i++) { 
+    for (let i = x; i <= x; i++) {
         mult = mult * i
-    }    
+    }
 }
-console.log(mult)
+console.log(mult)   

@@ -65,7 +65,6 @@ var vector = [];
 for (let i = 0; i < 20; i++) {
     vector[i]=Math.round((Math.random())*100);
 }
-
 var min = 100; 
 for (let i = 0; i < vector.length; i++) {
     if (vector[i] < min) {
@@ -76,6 +75,42 @@ console.log(vector, `el valor minimo del vector es: ${min}`)
 
 
 
+// EJERCICIO MODA 
+
+
+var vector = [];
+for (let i = 0; i < 20; i++) {
+    vector[i]=Math.round((Math.random())*100);
+}
+//----------------------------------------------------------------------
+var vector = [2, 9, 6, 3, 5]
+console.log(vector);
+var aux=0;
+    for (let i = 0; i < vector.length-1; i++) {
+       for (let j = i+1; j < vector.length ; j++) {
+        if (vector[i]> vector[j]) {
+            aux=vector[j];
+            vector[j]=vector[i];
+            vector[i]=aux;
+        }
+        
+       }        
+    }
+console.log(vector);
+contador = 0
+for (let i = 0; i < vector.length; i++) {
+    if (vector[i] == vector[i] ) {
+        contador += 1
+    } 
+}
+if (contador >= 2) {
+    console.log(`El vector tiene moda`)
+} else {
+    console.log(`El vector no tiene moda`)
+}
+
+
+
 //EJERCICIO MEDIANA 
 
 var vector=[];
@@ -83,22 +118,36 @@ for (let i = 0; i < 20 ; i++) {
     vector[i]=Math.round((Math.random())*100);
 }
 console.log(vector)
+var aux=0;
+    for (let i = 0; i < vector.length-1; i++) {
+       for (let j = i+1; j < vector.length ; j++) {
+        if (vector[i] > vector[j]) {
+            aux=vector[j];
+            vector[j]=vector[i];
+            vector[i]=aux;
+        }
+       }        
+    }
+console.log(vector);
 for (let i = 0; i < vector.length; i++) {
-    mdn=vector.length+1
-    mediana= mdn/2
-    posicion=vector[mediana]    
+    mdn = vector.length+1
+    mediana = mdn/2
+    medianaf =  Math.round(mediana)
+    posicion = vector[medianaf-1] 
 } if (mdn % 2 == 0) {
-    console.log(vector,mediana,posicion)
+    console.log(`la mediana es: ${mediana}`)  
+    console.log(`la mediana redondeada es: ${medianaf}`) 
+    console.log(`la posicion es: ${posicion}`)  
 } else {
-    
+    p2 = vector[medianaf-2]
+    console.log(`la mediana es: ${mediana}`)  
+    console.log(`la mediana redondeada es: ${medianaf}`) 
+    console.log(`la posicion 1 es: ${posicion}`) 
+    console.log(`la posicion 2 es: ${p2}`) 
 }
-console.log(vector,mediana,posicion)
-
-
 
 // ORDENAMIENTO POR BURBUJA:
 
-[suma,cont]=[0,0];//declarar varias variables en una línea, usa arreglos
 console.log(vector);
 var aux=0;
     for (let i = 0; i < vector.length-1; i++) {

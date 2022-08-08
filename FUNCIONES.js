@@ -66,62 +66,73 @@ console.log(claves(aprendiz));
     // const hola=()=>{
     //     console.log('Hola Mundo');
     // } 
+
 const hola=()=>console.log('Hola Mundo');
     hola()
+
 const hola1=parametro=>console.log(`Hola ${parametro}`);
     hola1('SENA');
+
     // const sumar=(a,b)=>{
     //     return a+b
     // }
+
 const sumar=(a,b)=>a+b
     console.log(sumar(3,5))
     console.log('nueva linea')
 
 //TAREA//
-function ecuacionc(a,b,c){
+
+function cuadratica(a,b,c){
     r1=(b*-1+Math.sqrt(Math.pow(b,2)-4*a*c))/(2*a)
     r2=(b*-1-Math.sqrt(Math.pow(b,2)-4*a*c))/(2*a)
-    console.log(r1);
-    console.log(r2);
+    console.log(`Respuesta positiva: ${r1}`);
+    console.log(`Respuesta negativa: ${r2}`);
 }
- ecuacionc(1,4,2);
+ cuadratica(1,4,2);
 
 
 //SUMA Y BUSCAR TAREA:
-var vc=[];
-for (let i = 0; i < 20 ; i++) {
-    vc[i]=Math.round((Math.random())*100);
-}
-sm=0;
-for (let i = 0; i < vc.length; i++) {
-    sm= sm+vc[i]
-}
-console.log(vc,sm);
 
-
-
-function vec(vector,tam){
-    for (let i = 0; i < tam; i++) {
-        vector[i]=Math.round((Math.random())*100);      
+function sumavec(vec){
+    for (let i = 0; i < 20 ; i++) {
+        vec[i] = Math.round((Math.random())*100);
     }
-    return vector; 
-    suma=0
-    for (let i = 0; i < vector.length; i++) {
-        suma=suma+vector[i];
+    suma = 0;
+    for (let i = 0; i < vec.length; i++) {
+        suma = suma + vec[i]
     }
-    return suma
+    console.log( vec, `la suma total del vector es: ${suma}`);
 }
-var v= vector=[];
-var t= 20;
-console.log(vec(v,t));
+sumavec([])
 
 
-function suma(vector) {
-    var suma = 0;
-    for (let i = 0; i < vector.length; i++) {
-        suma=suma+vector[i];
+//--------- BUSCAR
+
+function busqueda(vec, number){
+    for (let i = 0; i < 20 ; i++) {
+        vec[i] = Math.round((Math.random())*100);
     }
-    return suma;
+    console.log(vec)
+    var op1 = 0
+    for (let i = 0; i < vec.length; i++) {    
+    if (vec[i] == number) {
+        var op1 = 1 
+    }
+    }
+    contador = 0; 
+    for (let i = 0; i < vec.length; i++) {
+        if (vec[i] == number) {
+            contador+=1
+        }
+    }
+    if (op1 == 1) {
+        console.log(`${number} esta dentro del arreglo`)
+        console.log(`El numero ${number} esta repetido ${contador} veces`)   
+    } else if (op1 == 0) {
+        console.log(`${number} no esta dentro del arreglo`)
+    }
 }
-var v = vector=[2,5,7,4,3];
-console.log(suma(v))
+busqueda([], Math.round((Math.random())*100))
+
+
