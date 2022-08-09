@@ -370,19 +370,16 @@ elevar(Math.round(Math.random()*10), Math.round(Math.random()*10))
 
 
 
-
-
 // MEDIANA FUNCIONES 
 
 //CLASICA: 
 
-
-var vector=[];
-for (let i = 0; i < 20 ; i++) {
-    vector[i]=Math.round((Math.random())*100);
-}
-console.log(vector)
-var aux=0;
+function mediana(vector){
+    for (let i = 0; i < 20 ; i++) {
+        vector[i]=Math.round((Math.random())*100);
+    }
+    console.log(vector)
+    var aux=0;
     for (let i = 0; i < vector.length-1; i++) {
        for (let j = i+1; j < vector.length ; j++) {
         if (vector[i] > vector[j]) {
@@ -392,21 +389,44 @@ var aux=0;
         }
        }        
     }
-console.log(vector);
-for (let i = 0; i < vector.length; i++) {
-    mdn = vector.length+1
-    mediana = mdn/2
-    medianaf =  Math.round(mediana)
-    posicion = vector[medianaf-1] 
-} if (mdn % 2 == 0) {
-    console.log(`la mediana es: ${mediana}`)  
-    console.log(`la mediana redondeada es: ${medianaf}`) 
-    console.log(`la posicion es: ${posicion}`)  
-} else {
-    p2 = vector[medianaf-2]
-    console.log(`la mediana es: ${mediana}`)  
-    console.log(`la mediana redondeada es: ${medianaf}`) 
-    console.log(`la posicion 1 es: ${posicion}`) 
-    console.log(`la posicion 2 es: ${p2}`) 
+    console.log(vector);
+    for (let i = 0; i < vector.length; i++) {
+        var mdn = vector.length+1
+        var mediana = mdn/2
+        var medianaf =  Math.round(mediana)
+        var posicion = vector[medianaf-1] 
+    } if (mdn % 2 == 0) {
+        console.log(`la mediana es: ${mediana}`)  
+        console.log(`la mediana redondeada es: ${medianaf}`) 
+        console.log(`la posicion es: ${posicion}`)  
+    } else {
+        p2 = vector[medianaf-2]
+        console.log(`la mediana es: ${mediana}`)  
+        console.log(`la mediana redondeada es: ${medianaf}`) 
+        console.log(`la posicion 1 es: ${posicion}`) 
+        console.log(`la posicion 2 es: ${p2}`) 
+    }
 }
- 
+
+mediana([])
+
+
+//-------------------------------- FLECHA:
+
+var medianaEstadistica = vector =>{
+    for (let i = 0; i < 20 ; i++) {
+        vector[i]=Math.round((Math.random())*100);
+    } console.log(vector); var aux=0;
+    for (let i = 0; i < vector.length-1; i++) {
+        for (let j = i+1; j < vector.length ; j++) {
+         if (vector[i] > vector[j]) {
+             aux=vector[j];
+             vector[j]=vector[i];
+             vector[i]=aux;
+         }}} console.log(vector);
+         for (let i = 0; i < vector.length; i++) {var mdn = vector.length+1; var mediana = mdn/2; ;var medianaf =  Math.round(mediana); var posicion = vector[medianaf-1];
+        } if (mdn % 2 == 0) {console.log(`la mediana es: ${mediana}`); console.log(`la mediana redondeada es: ${medianaf}`); console.log(`la posicion es: ${posicion}`)  
+        } else { p2 = vector[medianaf-2]; console.log(`la mediana es: ${mediana}`); console.log(`la mediana redondeada es: ${medianaf}`) ; console.log(`la posicion 1 es: ${posicion}`); console.log(`la posicion 2 es: ${p2}`) 
+        }
+}
+medianaEstadistica([])
