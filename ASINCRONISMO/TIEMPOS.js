@@ -63,16 +63,39 @@ setTimeout(function(){
 console.log(Math.random() * (100 - 20) + 20);
 
 var limites = []; 
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 8; i++) {
     limites[i]= Math.round(Math.random() * (100 - 20) + 20);
 }
 
 setTimeout(function(){
     console.log(limites)
-}, 5000)
+}, 3000)
 
 setTimeout(() => {
     for (let i = 0; i < limites.length; i++) {
         console.log(limites[i])    
     }
 }, 2000);
+
+
+// Funcion para llenar un arreglo con numeros aleatorios, esa funcion se la van a pasar a un SetTimeout que dure 3 segundos, mientras transcurren esos 3 segundos, llenar un vector de numeros 1 a traves de una funcion.
+x = Math.round(Math.random() * (25-5) + 5);
+
+function numAleatorio(tam){
+    var arreglo = [];
+    for (let i = 0; i < tam; i++) {
+        arreglo[i]= Math.round(Math.random() * (100 - 20) + 20);  
+    }
+    console.log(arreglo);
+}
+
+function num1(veces){
+    var arreglo = [];
+    for (let i = 0; i < veces; i++) {
+        arreglo[i]= 1; 
+    }
+    console.log(arreglo);
+}
+
+setTimeout(numAleatorio, 3000, x);
+num1(x);
