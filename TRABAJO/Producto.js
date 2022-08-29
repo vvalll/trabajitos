@@ -1,12 +1,11 @@
 class Producto{
-    constructor(idProducto, nombreProducto, precioProducto, detalles, marca, cantidad, precioComprado){
+    constructor(idProducto, nombreProducto, precioProducto, detalles, marca){
         this._idProducto = idProducto;
         this._nombreProducto = nombreProducto;
         this._precioProducto = precioProducto;
         this._detatalles = detalles;
         this._marca = marca;
-        this._cantidad = cantidad;
-        this._precioComprado = precioComprado;
+        this._cantidad = 1;
     }
    
     set nombreProducto(nombreProducto){
@@ -27,10 +26,6 @@ class Producto{
 
     set cantidad(cantidad){
         this._cantidad = cantidad;
-    }
-
-    set precioComprado(precioComprado){
-        this._precioComprado = precioComprado;
     }
 
     get idProducto(){
@@ -55,10 +50,6 @@ class Producto{
 
     get cantidad(){
         return this._cantidad;
-    }
-
-    get precioComprado(){
-        return this._precioComprado;
     }
     
     crearProducto () {

@@ -1,49 +1,89 @@
-const Producto = require('./Producto.js');
+const Proveedor = require('./Proveedor.js');
+const ProductoProveedor = require('./ProductoProveedor');
+
 
 class PedidoProveedor {
-    constructor(idPedidoP, fechaCreacion, estadoPedido, precioCompra, producto){
+    constructor(idPedidoP, productoProveedor, proveedor){
         this._idPedidoP = idPedidoP;
-        this._fechaCreacion = fechaCreacion;
-        this._estadoPedido = estadoPedido;
-        this._precioCompra = precioCompra;
-        this._producto = producto;
-    }
-    set fechaCreacion (fechaCreacion){
-        this._fechaCreacion = fechaCreacion;
+        this._productoProveedor = productoProveedor;
+        this._proveedor = proveedor;
+        this._fecha = new Date; 
     }
 
-    set estadoPedido (estadoPedido){
-        this._estadoPedido = estadoPedido;
+    set productoProveedor(productoProveedor){
+        this._productoProveedor = productoProveedor;
     }
 
-    set precioCompra (precioCompra){
-        this._precioCompra = precioCompra;
-    }   
-
-    set producto (producto){
-        this._producto = producto;
+    set proveedor(proveedor){
+        this._proveedor = proveedor;
     }
 
     get idPedidoP(){
         return this._idPedidoP
     }
 
-    get fechaCreacion (){
-        return this._fechaCreacion
+    get productoProveedor(){
+        return this._productoProveedor
     }
 
-    get estadoPedido () {
-        return this._estadoPedido
+    get fecha (){
+        return this._fecha
     }
 
-    get precioCompra (){
-        return this._precioCompra
+    get proveedor(){
+        return this._proveedor
     }
 
-    get producto (){
-        return this._producto
+    
+
+    ContadorProductosP(array){
+        // console.log(this._productoProveedor);
+        let contador=0
+        for (let i = 0; i < array.length; i++) {
+            contador=contador + array[i]._cantidadP;
+            
+        }
+        console.log(`La cantidad total de productos es: ${contador}`);
+        }
+    
+
+
+    
+    añadirAPedidoP(array,productoProveedor,cantidad ){
+         let bus = 0
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] == productoProveedor) {
+                bus += 1
+            }
+        }
+        if (bus > 0) {
+            productoProveedor._cantidadP=cantidad
+            
+        } else  {
+            this._productoProveedor.push(productoProveedor)
+            productoProveedor._cantidadP=cantidad
+        }
     }
 
+
+    
 }
+// --------------------------------laura 
+var proveedor1 = new Proveedor("123", "Fulanito Gomez", "31345422333");
 
-module.exports = PedidoProveedor;   
+var productoP1 = new ProductoProveedor("001", "Pan", 5000, "Rollito", "Bimbo");
+
+var productoP2 = new ProductoProveedor("002", "Galletas", 15000, "Galletas de sal, 12 unidades por paquete", "Saltin");
+
+var pedidoP1 = new PedidoProveedor("111", productosP1 = [], proveedor1);
+
+pedidoP1.añadirAPedidoP(productosP1,productoP1,30);
+pedidoP1.añadirAPedidoP(productosP1,productoP2,40);
+console.log(pedidoP1)
+pedidoP1.ContadorProductosP(productosP1)
+
+
+
+
+
+module.exports = PedidoProveedor;                                                   

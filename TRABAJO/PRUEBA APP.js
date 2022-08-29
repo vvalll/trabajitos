@@ -35,7 +35,7 @@ var metodopago1 = new MetodoPago("Debito", "Davivienda", "Jesus Utria", "1011085
 
 var pedido1 = new Pedido(usuario1, 24422, "7 Julio 2022", "Salio", "", metodopago1);
 
-var carritocompra1 = new CarritoCompras(0001, 100, "18 Agosto 2022", producto1, pedido1); //producto 
+var carritocompra1 = new CarritoCompras(0001, 100, "18 Agosto 2022", carrito1=[], pedido1); //producto 
 
 var categoria1 = new Categoria(101,"Sport", ""); //producto
 
@@ -54,4 +54,7 @@ var moto1 = new Moto(2626, "TRK", 150000000, "Moto blanca con rojo, que hace br 
 var servicioRastreo1 = new ServicioDeRastreo("30 dias", 8887, moto1);
  
 
-console.log(accesorio1, administador1, carritocompra1, categoria1, cliente1, devolucion1, envio1, factura1, inventario1, metodopago1, moto1, pedido1, pedidoProveedor1, producto1, proveedor1, servicioRastreo1, usuario1)
+//console.log(accesorio1, administador1, carritocompra1, categoria1, cliente1, devolucion1, envio1, factura1, inventario1, metodopago1, moto1, pedido1, pedidoProveedor1, producto1, proveedor1, servicioRastreo1, usuario1)
+console.log(carritocompra1.productos)
+carritocompra1.añadirproducto(producto1)
+console.log(carritocompra1)

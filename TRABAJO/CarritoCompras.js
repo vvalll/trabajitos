@@ -2,11 +2,11 @@ const Producto = require('./Producto');
 const Pedido = require('./Pedido');
 
 class CarritoCompras {
-    constructor(idCarrito, cantidad, fechaAgregacion, producto, pedido){
+    constructor(idCarrito, productos, pedido){
         this._idCarrito = idCarrito;
-        this._cantidad = cantidad;
-        this._fechaAgregacion = fechaAgregacion;
-        this._producto = producto;
+        this._cantidad = 1;
+        this._fechaAgregacion = new Date;
+        this._productos = productos;
         this._pedido = pedido;
     }
 
@@ -22,8 +22,8 @@ class CarritoCompras {
         return this._fechaAgregacion;
     }
 
-    get producto(){
-        return this._producto;
+    get productos(){
+        return this._productos;
     }
 
     get pedido(){
@@ -38,13 +38,46 @@ class CarritoCompras {
         this._fechaAgregacion = fechaAgregacion;
     }
 
-    set producto(producto){
-        this._producto = producto;
+    set productos(productos){
+        this._productos = productos;
     }
 
     set pedido(pedido){
         this._pedido = pedido;
     }
+
+    ContadorProductos(array){
+        let contador=0
+        for (let i = 0; i < array.length; i++) {
+            contador=contador + array[i]._cantidad;
+            
+        }
+        console.log(`La cantidad total de productos en el carrito es: ${contador}`);
+        }
+    
+
+    añadirACarrito(array, producto, cantidad ){
+         let bus = 0
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] == producto) {
+                bus += 1
+            }
+        }
+        if (bus > 0) {
+            producto._cantidad = cantidad
+            
+        } else  {
+            this._producto.push(producto)
+            producto._cantidad = cantidad
+        }
+    }
+    
 }
+
+var productoC1 = new Producto("321", "Moto", 2000000, "Moto negra", "suzuki");
+var productoC2 = new Producto("432", "Casco", 400000, "Casco negra", "suzuki");
+
+var pedido1 = new Pedido([])
+
 
 module.exports = CarritoCompras; 
