@@ -46,7 +46,7 @@ class CarritoCompras {
         this._pedido = pedido;
     }
 
-    ContadorProductos(array){
+    ContadorProductosCarrito(array){
         let contador=0
         for (let i = 0; i < array.length; i++) {
             contador=contador + array[i]._cantidad;
