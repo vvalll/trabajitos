@@ -2,9 +2,9 @@ const Factura = require('./Factura');
 const Pedido = require('./Pedido');
 
 class Devolucion{
-    constructor(idDevolucion, fechaDevolucion, comentario, factura, pedido){
+    constructor(idDevolucion, comentario, factura, pedido){
         this._idDevolucion = idDevolucion;
-        this._fechaDevolucion = fechaDevolucion;
+        this._fechaDevolucion = new Date ;
         this._comentario = comentario;
         this._factura = factura;
         this._pedido = pedido;

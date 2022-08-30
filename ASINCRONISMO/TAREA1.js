@@ -17,20 +17,18 @@ function promedio(rellenar, vector){
 
 promedio(rellenar, vector = [])
 
-function desviacionEstandar(callback1, callback2, vector){
-    callback1(vector);
-    callback2(callback1(), vector);
+function desviacionEstandar(promedio, rellenar, vector){
     sumaF=0
-    for (let i = 0; i < vector.length; i++) {
-        sumaP= Math.pow(vector[i]-promedio,2);
+    for (let i = 0; i < (vector.length); i++) {
+        sumaP= Math.pow(promedio(rellenar(vector[i])) - promedio(rellenar(vector)),2);
         sumaF=sumaF+sumaP;
     }
-    varianza = Math.sqrt(sumaF/vector.length,2);
+    varianza = Math.sqrt(sumaF / (vector.length) , 2);
 
     console.log("La desviacion estandar es de: ", varianza)
 }
 
-desviacionEstandar(rellenar, promedio, vector = [] ); 
+desviacionEstandar(promedio, rellenar, vector =[]); 
 
 
 

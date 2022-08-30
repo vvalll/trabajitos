@@ -1,9 +1,9 @@
 const Pedido = require('./Pedido');
 
 class Factura{
-    constructor(idFactura, fecha, impuestos, tasaCambio, pedido){
+    constructor(idFactura, impuestos, tasaCambio, pedido){
         this._idFactura = idFactura;
-        this._fecha = fecha;
+        this._fecha = new Date;
         this._impuestos = impuestos;
         this._tasaCambio = tasaCambio;
         this._pedido = pedido;

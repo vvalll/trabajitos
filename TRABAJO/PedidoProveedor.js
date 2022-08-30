@@ -34,9 +34,8 @@ class PedidoProveedor {
         return this._proveedor
     }
 
-    
 
-    ContadorProductosP(array){
+    ContadorProductosProveedor(array){
         // console.log(this._productoProveedor);
         let contador=0
         for (let i = 0; i < array.length; i++) {
@@ -46,10 +45,8 @@ class PedidoProveedor {
         console.log(`La cantidad total de productos es: ${contador}`);
         }
     
-
-
-    
-    añadirAPedidoP(array,productoProveedor,cantidad ){
+        
+    añadirAPedidoProveedor(array,productoProveedor,cantidad ){
          let bus = 0
         for (let i = 0; i < array.length; i++) {
             if (array[i] == productoProveedor) {
@@ -66,7 +63,6 @@ class PedidoProveedor {
     }
 
 
-    
 }
 // --------------------------------laura 
 var proveedor1 = new Proveedor("123", "Fulanito Gomez", "31345422333");
