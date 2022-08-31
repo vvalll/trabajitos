@@ -76,13 +76,6 @@ var producto2 = new Producto("02", "nuggets", 13000, "Ricas", "McDonlads");
 
 var pedidoN1 = new Pedido(usuario1, "010", metodoPago1, productosA = []);
 
-pedidoN1.añadirAPedido(productosA, producto1, 6);
-pedidoN1.añadirAPedido(productosA, producto2, 8);
-
-pedidoN1.ContadorProductos(productosA);
-
-console.log(pedidoN1);
-
 
 
 module.exports = Pedido; 

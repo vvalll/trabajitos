@@ -33,58 +33,83 @@ pruebaCallback2(contarLetras, saludito, 'Val');
 // Escribir una receta de cocina, tiene secuencias: funcion principal con varias funciones 
 
 function recetaPizza(masa, relleno ) {
-    console.log(`Vamos a preparar una deliciosa pizza napolitana. Los ingredientes son:`)
+    console.log(`Vamos a preparar una deliciosa pizza napolitana.`)
+    masa()
+    relleno()
 }
 
 
-function masa(ingrediente1, ingrediente2, ingrediente3, ingrediente4, ingrediente5,ingrediente6, ingrediente7, ingrediente8, instrumento1, instrumento2, instrumento3) {
-    console.log(`Colocar la ${ingrediente1} mezclada con una pisca de ${ingrediente2} sobre la mesa y haz un hueco en el centro para dar forma de corona`);
+function masa() {
+    console.log(`Colocar la harina mezclada con una pisca de sal sobre la mesa y haz un hueco en el centro para dar forma de corona`);
 
     setTimeout(() => {
-       console.log(`Coge un bol y vierte el ${ingrediente3} junto con el ${ingrediente4} y la ${ingrediente5}. Revuelvelo todo hasta disolver por completo la ${ingrediente5} y vierte la mezcla en el centro de la corona de ${ingrediente1}`) 
+        console.log(`Vamos a empezar a hacer la masa:`)
+    }, 1000);
+
+    setTimeout(() => {
+       console.log(`Coge un bol y vierte el agua junto con el aceite y la levadura fresca. Revuelvelo todo hasta disolver por completo la levadura fresca y vierte la mezcla en el centro de la corona de harina`) 
     }, 2000);
 
     setTimeout(() => {
-        console.log(`Integra poco a poco los ingredientes hasta obtener una masa homogenea. Amasa durante 7 minutos sobre la mesa, haz una bola con la masa y cubrela con ${instrumento1}. Deja que repose durante 20 minutos.`)
+        console.log(`Integra poco a poco los ingredientes hasta obtener una masa homogenea. Amasa durante 7 minutos sobre la mesa, haz una bola con la masa y cubrela con harina. Deja que repose durante 20 minutos.`)
     }, 4000);
 
     setTimeout(() => {
-        console.log(`Pasado el tiempo, estira la masa con la ayuda de un ${instrumento2} y pasala a la ${instrumento3}. Ahora es momento de rellenarla `)
+        console.log(`Pasado el tiempo, estira la masa con la ayuda de un sal y pasala a la agua. Ahora es momento de rellenarla `)
     }, 6000);
 
     setTimeout(() => {
-       console.log(`Enharina una ${instrumento3} `); 
+       console.log(`Enharina una agua`); 
     }, 5000);
+}
 //----
+
+function relleno(){
+
     setTimeout(() => {
-       console.log(`Extiene la ${ingrediente6} sobre la base de la pizza dejando libre un borde de 1 cm.`) 
+        console.log(`Continuamos con el relleno: `)
+    }, 7000);
+
+    setTimeout(() => {
+       console.log(`Extiende la salsa de tomate sobre la base de la pizza dejando libre un borde de 1 cm.`) 
     }, 8000);
 
     setTimeout(() => {
-        console.log(`Distribuye la ${ingrediente7} rallada por todas partes y hornea la pizza durante 10 minutos a 170°C`)
+        console.log(`Distribuye la mozzarella rallada por todas partes y hornea la pizza durante 10 minutos a 170°C`)
     }, 10000);
 
     setTimeout(() => {
-       console.log(`Ralla la ${ingrediente7}`) 
+       console.log(`Ralla la mozzarella`) 
     }, 9000);
 
     setTimeout(() => {
-        console.log(`Retirala y cubrela con los ${ingrediente8} cortados en rodajas `)
+        console.log(`Retirala y cubrela con los tomates cortados en rodajas `)
     }, 12000);
 
     setTimeout(() => {
-       console.log(`Corta los ${ingrediente8}`) 
+       console.log(`Corta los tomates`) 
     }, 11000);
 
+    setTimeout(() => {
+        console.log(`Añade sal a gusto, reparte el ajo y el perejil picados ` )
+    }, 14000);
 
+    setTimeout(() => {
+        console.log(`Pica el ajo y el perejil`)
+    }, 13000);
+
+    setTimeout(() => {
+        console.log(`Incorpora las aceitunas y rocia la pizza casera con un hilo de aceite de oliva`);
+    }, 16000);
+
+    setTimeout(() => {
+        console.log(`Hornea la pizza durante 5 minutos mas y retirala para servila`)
+    }, 18000);
 }
 
+recetaPizza(masa, relleno)
 
-//harina, sal, agua, aceite, levadura fresca, salsa de tomate, mozzarella, tomates
 
-//papelfilm, rodillo, bandeja de horno
-
-//https://www.recetasgratis.net/receta-de-pizza-napolitana-32625.html
 
 
 //Hacer desviacion estandar de arreglos con funciones (media, etc)

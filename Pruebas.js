@@ -260,6 +260,131 @@ function saySomething(x) {
    talk(4);
    talk(8);
    
-       
+
+// 1. Configure una Promesa que se resuelva con un valor de Empezar a contar.
+// 2. Cree una función llamada contador() que tenga un argumento que obtenga el valor y lo envíe a la consola.
+// 3. Configure la siguiente función en Promise con cuatro instancias de then(), que deben generar un valor en la función de contador y devolver un valor que proporcionará entrada para la siguiente instancia de then(). Los valores devueltos deben ser uno, luego dos, luego tres. La salida de pantalla en la consola debe ser la siguiente:
+
+// Start Counting
+// One
+// Two
+// Three
+
+
+let promesaC = new Promise(function contador(resolve, reject){
+    resolve("Start counting");
+    reject("Error");
+})
+
+.then(value => {
+    console.log(value);
+    return "One";
+})
+
+.then(value => {
+    console.log(value);
+    return "Two";
+})
+
+.then(value => {
+    console.log(value);
+    return "Three";
+})
+
+.then(value => {
+    console.log(value);
+})
+
+.catch(value => {
+    console.log(value);
+})
+
+//--
+
+let promesaN = new Promise(function contadorNumerico(resolve, reject){
+    
+    resolve("Start counting");    
+    reject("Error");
+    
+})
+
+.then(value => {
+    setTimeout(() => {
+        console.log(value);
+    }, 1000); 
+    return 1;
+})
+
+.then(value => {
+    setTimeout(() => {
+        console.log(value);
+    }, 2000);
+    return value+1;
+})
+
+.then(value => {
+    setTimeout(() => {
+        console.log(value);
+    }, 3000);
+    return value+1 ;
+})
+
+.then(value => {
+    setTimeout(() => {
+        console.log(value);
+    }, 4000);
+})
+
+.catch(value => {
+    console.log(value);
+})
+
+
+//---
+
+let promesaProfe = new Promise(function contadorProfe(resolve, reject){
+    
+    resolve("Start counting");    
+    reject("Error");
+    
+})
+
+let x = 1;
+let tiempo = 1000
+promesaProfe.then(value => {
+    setTimeout(() => {
+        console.log(value);
+    }, tiempo); 
+    return x;
+})
+
+.then(x => {
+    setTimeout(() => {
+        console.log(x);
+    }, tiempo += 1000);
+    return x+1;
+})
+
+.then(value => {
+    setTimeout(() => {
+        console.log(value);
+    }, tiempo += 1000);
+    return value + 1 ;
+})
+
+.then(value => {
+    setTimeout(() => {
+        console.log(value);
+    }, tiempo += 1000);
+})
+
+.catch(value => {
+    console.log(value);
+})
+
+
+
+
+   
    
    
