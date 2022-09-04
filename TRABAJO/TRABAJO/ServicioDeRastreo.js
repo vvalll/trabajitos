@@ -32,7 +32,6 @@ class ServicioDeRastreo  {
         return this._moto;
     }
 
-    //metodos
     localizar(){
     }
 

@@ -56,25 +56,7 @@ class Usuario{
     get contraseña(){
         return this._contraseña;
     }
-    //metodos
-    estadoActividad(){
-
-    }
-    tiempoActividad(){
-
-    }
-    diaRegistro(){
-
-    }
-    verificarInicio(){
-
-    }
-    editarPerfil(){
-
-    }
-    eliminarPerfil(){
-        
-    }
+    
 }
 
 module.exports = Usuario;

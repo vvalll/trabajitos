@@ -50,10 +50,6 @@ class Cliente extends Usuario{ //extends es una herencia
     get pedido(){   
         return this._pedido;
     }
-    //Metodos
-    consultarProducto(){
-
-    }
 }
 
 module.exports = Cliente;

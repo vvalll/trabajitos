@@ -1,11 +1,13 @@
 const Factura = require('./Factura');
+const Pedido = require('./Pedido');
 
 class Devolucion{
-    constructor(idDevolucion, fechaDevolucion, comentario, factura){
+    constructor(idDevolucion, comentario, factura, pedido){
         this._idDevolucion = idDevolucion;
-        this._fechaDevolucion = fechaDevolucion;
+        this._fechaDevolucion = new Date ;
         this._comentario = comentario;
         this._factura = factura;
+        this._pedido = pedido;
     }
 
     get idDevolucion(){
@@ -24,6 +26,10 @@ class Devolucion{
         return this._factura;
     }
 
+    get pedido(){
+        return this._pedido;
+    }
+
     set fechaDevolucion(fechaDevolucion){
         this._fechaDevolucion = fechaDevolucion;
     }
@@ -35,13 +41,9 @@ class Devolucion{
     set factura(factura){
         this._factura = factura;
     }
-    //Metodos
-    devolucionDinero(){
-
-    }
-
-    validacionFactura(){
-
+    
+    set pedido(pedido){
+        this._pedido = pedido;
     }
 }
 

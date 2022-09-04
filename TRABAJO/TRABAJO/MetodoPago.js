@@ -46,13 +46,6 @@ class MetodoPago{
     set fechaVencimiento(fechaVencimiento){
         this._fechaVencimiento = fechaVencimiento;
     }
-    //metodos
-    validadDatos(){
-
-    }
-    calcularCuotas(){
-        
-    }
 }
 
 module.exports = MetodoPago;

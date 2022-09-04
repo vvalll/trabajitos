@@ -135,6 +135,18 @@ function externa(parametro){
     }, 2000 );
 }
 
+//------------
+
+
+const impresion=()=>{
+    return new Promise(resolve=>{
+        setTimeout(() => {resolve("HOLA")},2000);
+    }
+)}
+
+impresion().then(() =>{
+    console.log(value)
+})
 
 //________________________________
 
@@ -225,7 +237,7 @@ function presupuestoProductos(){
     }
     console.log(`El precio total de los productos en el carrito es ${suma}`);
 
-    var presupuestoInicial = 70000
+    var presupuestoInicial = 50000
 
     var sobrante = presupuestoInicial - suma;
 
@@ -248,6 +260,12 @@ function presupuestoProductos(){
 //     }
 // }
 // presupuestoCompras(70000, preciofinalProductos)
+
+
+
+//----------------------------------------------------------
+
+
 
 
 

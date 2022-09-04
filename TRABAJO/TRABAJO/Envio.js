@@ -1,13 +1,11 @@
 const Pedido = require('./Pedido');
 
 class Envio{
-    constructor(idEnvio, tipoEnvio, costoEnvio, direccion, fechaEnvio, tiempoEstimado, lugarOrigen, pedido){
+    constructor(idEnvio, tipoEnvio, costoEnvio, direccion, lugarOrigen, pedido){
         this._idEnvio = idEnvio;
         this._tipoEnvio = tipoEnvio;
         this._costoEnvio = costoEnvio;
         this._direccion = direccion;
-        this._fechaEnvio = fechaEnvio;
-        this._tiempoEstimado = tiempoEstimado;
         this._lugarOrigen = lugarOrigen;
         this._pedido = pedido;
     }
@@ -26,14 +24,6 @@ class Envio{
 
     get direccion(){
         return this._direccion;
-    }
-
-    get fechaEnvio(){
-        return this._fechaEnvio;
-    }
-
-    get tiempoEstimado(){
-        return this._tiempoEstimado;
     }
 
     get lugarOrigen(){
@@ -56,31 +46,12 @@ class Envio{
         this._direccion = direccion;
     }
 
-    set fechaEnvio(fechaEnvio){
-        this._fechaEnvio = fechaEnvio;
-    }
-
-    set tiempoEstimado(tiempoEstimado){
-        this._tiempoEstimado = tiempoEstimado;
-    }
-
     set lugarOrigen(lumpoOrigen){
         this._lumpoOrigen = lumpoOrigen;
     }
 
     set pedido(pedido){
         this._pedido = pedido;
-    }
-
-    //Metodos
-    actualizarInt(){
-
-    }
-    fechaEstimada(){
-
-    }
-    subTotal(){
-        
     }
 }
 

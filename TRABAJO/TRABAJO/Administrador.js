@@ -14,31 +14,6 @@ class Administrador extends Usuario{ //extends es una herencia
     set pedidoProveedor(pedidoProveedor){
         this._pedidoProveedor = pedidoProveedor;
     }
-    //Metodos
-    actualizarCategorias(){
-
-    }
-    agregarCategoria(){
-
-    }
-    eliminarCategoria(){
-
-    }
-    actualizarProductos(){
-
-    }
-    eliminarProducto(){
-
-    }
-    consultarCliente(){
-        
-    }
-    buscarCliente(){
-
-    }
-    borrarCliente(){
-
-    }
 }
 
 module.exports = Administrador;
