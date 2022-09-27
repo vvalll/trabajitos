@@ -1,7 +1,27 @@
 {
-    "type": "module",
-    "dependencies": {
-        "node-fecth": "0.0.1-security",
-        "node-fetch": "^3.2.10"
-    }
+  "type": "module",
+  "dependencies": {
+    "node-fecth": "0.0.1-security",
+    "node-fetch": "^3.2.10"
+  },
+  "name": "trabajos-ciclos---condicionales",
+  "version": "1.0.0",
+  "main": "Pruebas.js",
+  "scripts": {
+    "test": "nodemon index.js",
+    "start": "node index.js",
+    "lint": "eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vvalll/trabajitos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vvalll/trabajitos/issues"
+  },
+  "homepage": "https://github.com/vvalll/trabajitos#readme",
+  "description": ""
 }

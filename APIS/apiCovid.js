@@ -25,3 +25,4 @@ fetch(URL)
     }
     console.log("Total de fallecidos: ", suma,  "Promedio de muertes: ", promedio)
 })
+
